@@ -1,0 +1,98 @@
+main {
+  min-height: 80vh;
+}
+
+h3 {
+  padding: 1rem 0;
+}
+
+h1 {
+  font-size: 1.8rem;
+  padding: 1rem 0;
+}
+
+h2 {
+  font-size: 1.4rem;
+  padding: 0.5rem 0;
+}
+
+.rating span {
+  margin: 0.1rem;
+}
+
+/* carousel */
+
+.carousel-item-next, .carousel-item-prev, .carousel-item.active {
+  display: flex;
+}
+
+.carousel-caption {
+  position: absolute;
+  top: 0;
+}
+
+.carousel-caption h2 {
+  color: #fff;
+}
+
+.carousel img {
+  height: 300px;
+  padding: 30px;
+  margin: 40px;
+  border-radius: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.carousel a {
+  margin: 0 auto;
+}
+
+@media (max-width: 900px) {
+  .carousel-caption h2 {
+    font-size: 2.5vw;
+  }
+}
+
+.primaryBg {
+  background-color: #e49824;
+}
+
+.p-2 {
+  border: #fff 3px solid;
+  border-radius: 5px;
+  color: #000000;
+}
+
+.p-2:hover {
+  background-color: #fff;
+  color: #cc7351;
+  border: #fff 3px solid;
+}
+
+.p-2:active {
+  background-color: #fff;
+  color: #cc7351;
+  border: #fff 3px solid;
+}
+
+.mr-sm-2 {
+  border-radius: 5px;
+}
+
+body {
+	background-color: rgb(219, 219, 219);
+}
+
+.homeCarousel {
+  background-color: transparent;
+}
+
+.homeCarousel:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+}
+
+.carousel-caption h2 {
+  color: #000000;
+}
