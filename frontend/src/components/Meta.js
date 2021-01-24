@@ -12,9 +12,9 @@ const Meta = ({ title, description, keywords }) => {
 }
 
 Meta.defaultProps = {
-  title: 'Furniturey',
-  description: 'We help you to make your romm brighter',
-  keywords: 'armchair, sofa, furniture',
+  title: 'Dream Study',
+  description: 'Let professionals help you to get your dream study',
+  keywords: 'university, scholarship, master, bachelor',
 }
 
 export default Meta

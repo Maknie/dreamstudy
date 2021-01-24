@@ -26,6 +26,10 @@ h2 {
   display: flex;
 }
 
+.poppinsFont {
+  font-family: 'Poppins', sans-serif;
+}
+
 .carousel-caption {
   position: absolute;
   top: 0;
@@ -55,25 +59,47 @@ h2 {
 }
 
 .primaryBg {
-  background-color: #e49824;
+  background-color: #79589f;
+}
+
+.colWhite {
+  color: #fff;
+}
+
+.colWhite:hover {
+  color: #b7a4ce;
+}
+
+#username {
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+}
+
+#username:hover {
+  color: #b7a4ce;
 }
 
 .p-2 {
   border: #fff 3px solid;
   border-radius: 5px;
-  color: #000000;
+  color: #fff;
+  background-color: #79589f;
 }
 
 .p-2:hover {
   background-color: #fff;
-  color: #cc7351;
+  color: #b7a4ce;
   border: #fff 3px solid;
 }
 
 .p-2:active {
   background-color: #fff;
-  color: #cc7351;
+  color: #b7a4ce;
   border: #fff 3px solid;
+}
+
+.p-2::after{
+  color: #fff;
 }
 
 .mr-sm-2 {
