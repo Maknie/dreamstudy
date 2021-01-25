@@ -32,7 +32,7 @@ const CartScreen = ({ match, location, history }) => {
   return (
     <Row>
       <Col md={8}>
-        <h1>Shopping Cart</h1>
+        <h1>Cart</h1>
         {cartItems.length === 0 ? (
           <Message>
             Your cart is empty <Link to='/'>Go Back</Link>
@@ -49,23 +49,6 @@ const CartScreen = ({ match, location, history }) => {
                     <Link to={`/product/${item.product}`}>{item.name}</Link>
                   </Col>
                   <Col md={2}>${item.price}</Col>
-                  <Col md={2}>
-                    <Form.Control
-                      as='select'
-                      value={item.qty}
-                      onChange={(e) =>
-                        dispatch(
-                          addToCart(item.product, Number(e.target.value))
-                        )
-                      }
-                    >
-                      {[...Array(item.countInStock).keys()].map((x) => (
-                        <option key={x + 1} value={x + 1}>
-                          {x + 1}
-                        </option>
-                      ))}
-                    </Form.Control>
-                  </Col>
                   <Col md={2}>
                     <Button
                       type='button'
@@ -86,8 +69,8 @@ const CartScreen = ({ match, location, history }) => {
           <ListGroup variant='flush'>
             <ListGroup.Item>
               <h2>
-                Subtotal ({cartItems.reduce((acc, item) => acc + item.qty, 0)})
-                items
+                Subtotal
+                services
               </h2>
               $
               {cartItems
@@ -97,7 +80,7 @@ const CartScreen = ({ match, location, history }) => {
             <ListGroup.Item>
               <Button
                 type='button'
-                className='btn-block'
+                className='btn-block primaryBg'
                 disabled={cartItems.length === 0}
                 onClick={checkoutHandler}
               >

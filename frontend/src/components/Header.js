@@ -21,13 +21,13 @@ const Header = () => {
       <Navbar className="primaryBg" variant='secondary' expand='lg' collapseOnSelect>
         <Container>
           <LinkContainer to='/'>
-            <Navbar.Brand className="colWhite poppinsFont">Dream Study</Navbar.Brand>
+            <Navbar.Brand className="colWhite poppinsFont hov">Dream Study</Navbar.Brand>
           </LinkContainer>
           <Navbar.Toggle aria-controls='basic-navbar-nav' />
           <Navbar.Collapse id='basic-navbar-nav'>
             <Nav className='ml-auto'>
               <LinkContainer to='/cart'>
-                <Nav.Link  className="colWhite poppinsFont">
+                <Nav.Link  className="colWhite poppinsFont hov">
                   <i className='fas fa-shopping-cart'></i> Cart
                 </Nav.Link>
               </LinkContainer>
@@ -42,7 +42,7 @@ const Header = () => {
                 </NavDropdown>
               ) : (
                 <LinkContainer to='/login'>
-                  <Nav.Link className="colWhite poppinsFont">
+                  <Nav.Link className="colWhite poppinsFont hov">
                     <i className='fas fa-user'></i> Sign In
                   </Nav.Link>
                 </LinkContainer>
@@ -50,13 +50,13 @@ const Header = () => {
               {userInfo && userInfo.isAdmin && (
                 <NavDropdown title='Admin' id='adminmenu'>
                   <LinkContainer to='/admin/userlist'>
-                    <NavDropdown.Item className="colWhite poppinsFont">Users</NavDropdown.Item>
+                    <NavDropdown.Item className=" poppinsFont">Users</NavDropdown.Item>
                   </LinkContainer>
                   <LinkContainer to='/admin/productlist'>
-                    <NavDropdown.Item className="colWhite poppinsFont">Products</NavDropdown.Item>
+                    <NavDropdown.Item className=" poppinsFont">Products</NavDropdown.Item>
                   </LinkContainer>
                   <LinkContainer to='/admin/orderlist'>
-                    <NavDropdown.Item className="colWhite poppinsFont">Orders</NavDropdown.Item>
+                    <NavDropdown.Item className=" poppinsFont">Orders</NavDropdown.Item>
                   </LinkContainer>
                 </NavDropdown>
               )}

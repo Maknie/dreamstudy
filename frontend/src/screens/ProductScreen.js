@@ -60,7 +60,7 @@ const ProductScreen = ({ history, match }) => {
   return (
     <>
       <Link className='btn btn-light my-3' to='/'>
-        Go Back
+      <i className="fas fa-long-arrow-alt-left fa-3x primaryCol"></i>
       </Link>
       {loading ? (
         <Loader />
@@ -84,7 +84,7 @@ const ProductScreen = ({ history, match }) => {
                     text={`${product.numReviews} reviews`}
                   />
                 </ListGroup.Item>
-                <ListGroup.Item>Price: ${product.price}</ListGroup.Item>
+                <ListGroup.Item>Cost: ${product.price}</ListGroup.Item>
                 <ListGroup.Item>
                   Description: {product.description}
                 </ListGroup.Item>
@@ -104,40 +104,16 @@ const ProductScreen = ({ history, match }) => {
 
                   <ListGroup.Item>
                     <Row>
-                      <Col>Status:</Col>
+                      <Col>Available service:</Col>
                       <Col>
-                        {product.countInStock > 0 ? 'In Stock' : 'Out Of Stock'}
+                        {product.countInStock > 0 ? 'Yes' : 'No'}
                       </Col>
                     </Row>
                   </ListGroup.Item>
-
-                  {product.countInStock > 0 && (
-                    <ListGroup.Item>
-                      <Row>
-                        <Col>Qty</Col>
-                        <Col>
-                          <Form.Control
-                            as='select'
-                            value={qty}
-                            onChange={(e) => setQty(e.target.value)}
-                          >
-                            {[...Array(product.countInStock).keys()].map(
-                              (x) => (
-                                <option key={x + 1} value={x + 1}>
-                                  {x + 1}
-                                </option>
-                              )
-                            )}
-                          </Form.Control>
-                        </Col>
-                      </Row>
-                    </ListGroup.Item>
-                  )}
-
                   <ListGroup.Item>
                     <Button
                       onClick={addToCartHandler}
-                      className='btn-block'
+                      className='btn-block primaryBg'
                       type='button'
                       disabled={product.countInStock === 0}
                     >

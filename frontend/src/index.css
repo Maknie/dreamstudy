@@ -59,15 +59,19 @@ h2 {
   background-color: #79589f;
 }
 
+.primaryCol {
+  color: #79589f;
+}
+
 .colWhite {
   color: #fff;
 }
 
-.colWhite:hover {
+.hov:hover {
   color: #b7a4ce;
 }
 
-#username {
+#username, #adminmenu {
   color: #fff;
   font-family: 'Poppins', sans-serif;
 }
